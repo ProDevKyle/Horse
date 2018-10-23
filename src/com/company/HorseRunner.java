@@ -1,12 +1,12 @@
 package com.company;
 
-public class HorseRunner {
-
+public class HorseRunner
+{
     public static void main(String[] args)
     {
-        Horse horse1 = new Mustang("Secretariat", 12000);
-        Horse horse2 = new Mustang("Duty Trail", 22000);
-        Horse horse3 = new Mustang("Silver", 12000);
+        Horse horse1 = new unicorn("Secretariat", 12000);
+        Horse horse2 = new unicorn("Duty Trail", 22000);
+        Horse horse3 = new unicorn("Silver", 12000);
 
         Horse[] horses = new Horse[6];
 
