@@ -1,9 +1,13 @@
 package com.company;
 
-public class HorseBarn extends HorseRunner
+public class HorseBarn
 {
-    private Horse[]spaces;
-    public findHorseSpace(String name)
+    private Horse[] spaces;
+    public HorseBarn(Horse[] spaces)
+    {
+        this.spaces = spaces;
+    }
+    public int findHorseSpace(String name)
     {
         for (int i = 0; i < this.spaces.length; i++)
         {
@@ -11,11 +15,8 @@ public class HorseBarn extends HorseRunner
             {
                 return i;
             }
-            else
-            {
-                return -1;
-            }
         }
+        return -1;
     }
     public void consolidate()
     {
@@ -23,7 +24,7 @@ public class HorseBarn extends HorseRunner
         {
             if (this.spaces[i] == null)
             {
-                for (int j = 0; j < this.spaces.length; j++)
+                for (int j = i + 1; j < this.spaces.length; j++)
                 {
                     if (this.spaces[j] != null)
                     {
