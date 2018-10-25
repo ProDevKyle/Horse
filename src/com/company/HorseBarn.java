@@ -1,12 +1,13 @@
 package com.company;
 
-public class HorseBarn
-{
+public class HorseBarn {
     private Horse[] spaces;
+
     public HorseBarn(Horse[] spaces)
     {
         this.spaces = spaces;
     }
+
     public int findHorseSpace(String name)
     {
         for (int i = 0; i < this.spaces.length; i++)
@@ -18,9 +19,10 @@ public class HorseBarn
         }
         return -1;
     }
+
     public void consolidate()
     {
-        for (int i = 0; i < this.spaces.length-1; i++)
+        for (int i = 0; i < this.spaces.length - 1; i++)
         {
             if (this.spaces[i] == null)
             {
@@ -29,9 +31,9 @@ public class HorseBarn
                     if (this.spaces[j] != null)
                     {
                         this.spaces[i] = this.spaces[j];
+                        this.spaces[j] = null;
+                        j = this.spaces.length;
                     }
-                    this.spaces[j] = null;
-                    j = this.spaces.length;
                 }
             }
         }
